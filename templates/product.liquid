@@ -128,7 +128,7 @@
 <script> 
   $("#Quantity").on("change", function() {
     $("#AddToCart").attr("data-cart-quantity", $(this).val());
-  })
+  });
 
   var selectCallback = function(variant, selector) {
     console.log("Switching variant: ", variant);
@@ -137,6 +137,10 @@
       variant: variant,
     })
   };
+
+  $(document).on('cart.requestComplete', function(event, cart) {
+     console.log("Cart has been successfully updated: ", cart);
+  });
 
   jQuery(function($) {
     new Shopify.OptionSelectors('productSelect', {

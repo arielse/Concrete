@@ -93,12 +93,6 @@ concrete.init = function () {
   concrete.collectionViews();
   concrete.loginForms();
 
-
-  rivets.binders.href = function(el, value) {
-    console.log("Rivets value: ", value);
-    return el.href = "{{ shop.url }}" + value;
-  }
-
   rivets.binders.cloak = {
     priority: -1000,
     bind: function(el) {
