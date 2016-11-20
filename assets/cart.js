@@ -247,6 +247,9 @@
           422: function(err) {
             if (CartJS.errorHandling.cartError) {
               CartJS.errorHandling.cartError(JSON.parse(err.responseText));
+            } else {
+              var error = JSON.parse(err.responseText);
+              console.log("Cannot add item to cart: " + error.description);
             }
           }
         },
