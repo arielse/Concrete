@@ -108,7 +108,7 @@
 
 {% comment %}
   To take advantage of a callback on the select dropdown, add option_selection.js
-  and customize the JS in timber.productPage as needed.
+  and customize the JS in concrete.productPage as needed.
 
   Currently, timber.productPage does the following:
     - Hides your <select> tag from above
@@ -135,10 +135,6 @@
       variant: variant,
     })
   };
-
-  $(document).on('cart.requestComplete', function(event, cart) {
-     console.log("Cart has been successfully updated: ", cart);
-  });
 
   jQuery(function($) {
     new Shopify.OptionSelectors('productSelect', {
