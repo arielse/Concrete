@@ -396,7 +396,7 @@ select {
     cursor: default;
     background-color: lighten($colorAlternate, 30%);
     border-color: lighten($colorAlternate, 30%);
-    color: lighten($colorAlternate, 0%);
+    color: $colorBackground;
     &:hover {
       @extend .disabled
     }
@@ -777,7 +777,7 @@ form#AddToCartForm, form#CartPage, form#contact_form {
 body {
   @include transition();
   &.loading {
-    // Do something while the Ajax elements load
+    // Do something while the Ajax loads
     opacity: 0;
   }
 }
