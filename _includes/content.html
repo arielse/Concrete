@@ -1,29 +1,33 @@
 <main>
-  <aside class="sidebar column l3 s-hide">
+  <aside class="sidebar column l3 s-hide" id="navbar-example" >
     <h3>Contents</h3>
+    <ul class="nav nav-tabs" role="navigation">
+      <li>
+        <h4><a data-scroll href="#getting-started">Getting Started</a></h4>
+        <ul>
+          {% for item in site.docs %}
+            {% if item.category == 'Getting Started' %}
+              <li><a data-scroll href="#{{ item.handle }}">{{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
 
-      <h4><a data-scroll href="#getting-started">Getting Started</a></h4>
-      <ul>
-        {% for item in site.docs %}
-          {% if item.category == 'Getting Started' %}
-            <li><a data-scroll href="#{{ item.handle }}">{{ item.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-
-      <h4><a data-scroll href="#the-grid">The Grid</a></h4>
-      <ul>
-        {% for item in site.docs %}
-          {% if item.category == 'The Grid' %}
-            <li><a data-scroll href="#{{ item.handle }}">{{ item.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-
+      <li>
+        <h4><a data-scroll href="#the-grid">The Grid</a></h4>
+        <ul>
+          {% for item in site.docs %}
+            {% if item.category == 'The Grid' %}
+              <li><a data-scroll href="#{{ item.handle }}">{{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
   </aside>
 
-  <div class="column l9 s12">
-    <div class="documentation">
+  <div class="column l9 s12 documentation">
+
       <h2 id="getting-started">Getting Started</h2>
       {% for item in site.docs %}
         {% if item.category == 'Getting Started' %}
@@ -39,6 +43,6 @@
           {{ item.content }}
         {% endif %}
       {% endfor %}
-    </div>
+
   </div>
 </main>

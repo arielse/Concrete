@@ -11,7 +11,7 @@ $colorBlue: #64D9EF;
 $colorYellow: #F1FA8C;
 $colorText: #282A36;
 $colorBackground: #FBFBFB;
-$colorGrey: #F3F3F3;
+$colorGrey: #f3f3f3;
 
 // Typography
 $fontLight: 300;
@@ -181,3 +181,4 @@ $transition: all .3s ease-out;
 @import "typography";
 @import "form";
 @import "additions";
+@import "syntax";

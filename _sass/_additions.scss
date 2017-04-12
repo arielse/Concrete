@@ -43,9 +43,9 @@ header {
 
 aside.sidebar {
   padding: 50px;
-  background: $colorGrey;
 }
 
 .documentation {
-  padding: 50px!important;
+  padding: $gutter;
+  background-color: #fff;
 }
