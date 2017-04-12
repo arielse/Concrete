@@ -1,14 +1,13 @@
 body {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   line-height: $lineHeight;
-  letter-spacing: -0.025rem;
+  letter-spacing: 0.33px;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   line-height: $lineHeight;
-  letter-spacing: -0.025rem;
   display: block;
   margin-bottom: $gutter/3;
   a {
@@ -21,21 +20,21 @@ h1, .h1 {
   letter-spacing: 0.5px
 }
 h2, .h2 {
-  font-size: 2.5rem;
+  font-size: 2.31rem;
   font-weight: $fontLight;
   letter-spacing: 0.5px
 }
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
-h4, .h4 { font-size: 1.25rem; }
+h4, .h4 { font-size: 1.5rem; }
 h5, .h5 { font-size: 1rem; }
 h6, .h6 { font-size: 0.875rem; }
 
 p {
   font-size: 1rem;
   font-weight: $fontRegular;
-  line-height: $lineHeight*1.9;
+  line-height: $lineHeight;
   margin-bottom: 1.4rem;
 }
 
@@ -86,5 +85,41 @@ i {
   }
   ol {
     list-style-type: decimal;
+  }
+}
+.sidebar {
+  h3 {
+    font-weight: $fontBold;
+    color: $colorBlue;
+  }
+  h4 {
+    font-weight: $fontBold;
+    margin-bottom: 0;
+  }
+  li {
+    font-size: 1.15rem;
+    font-weight: $fontLight;
+    .active {
+      font-weight: $fontBold;
+    }
+  }
+  a {
+    color: lighten($colorText, 1%);
+    text-decoration: none;
+    .active {
+      color: $colorText;
+    }
+  }
+  ul {
+    margin-bottom: $gutter / 2;
+  }
+}
+.documentation {
+  h2 {
+    font-weight: $fontBold;
+    color: $colorText;
+  }
+  h3 {
+    font-size: 1.5rem;
   }
 }
