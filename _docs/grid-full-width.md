@@ -1,6 +1,6 @@
 ---
 title:  "2.1 Full Width"
-handle: "containers"
+handle: "full-width"
 date:   2017-03-12 12:30:32 +1100
 category: 'The Grid'
 ---

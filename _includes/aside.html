@@ -1,0 +1,28 @@
+<aside class="sidebar column l4 m-hide s-hide">
+  <div>
+    <h3>Contents</h3>
+    <ul role="navigation">
+      <li>
+        <h4><a href="#getting-started">Getting Started</a></h4>
+        <ul>
+          {% for item in site.docs %}
+            {% if item.category == 'Getting Started' %}
+              <li><a href="#{{ item.handle }}">{{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <li>
+        <h4><a href="#the-grid">The Grid</a></h4>
+        <ul>
+          {% for item in site.docs %}
+            {% if item.category == 'The Grid' %}
+              <li><a href="#{{ item.handle }}">{{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</aside>

@@ -87,7 +87,7 @@ i {
     list-style-type: decimal;
   }
 }
-.sidebar {
+aside.sidebar {
   h3 {
     font-weight: $fontBold;
     color: $colorBlue;
@@ -104,8 +104,9 @@ i {
     }
   }
   a {
-    color: lighten($colorText, 1%);
+    color: lighten($colorText, 2%);
     text-decoration: none;
+    transition: none;
     .active {
       color: $colorText;
     }
@@ -114,7 +115,7 @@ i {
     margin-bottom: $gutter / 2;
   }
 }
-.documentation {
+article.documentation {
   h2 {
     font-weight: $fontBold;
     color: $colorText;

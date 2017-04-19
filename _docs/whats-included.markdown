@@ -1,6 +1,6 @@
 ---
 title:  "1.3 What's included?"
-handle: "who-is-concrete-for"
+handle: "whats-included"
 date:   2017-03-10 12:50:32 +1100
 category: 'Getting Started'
 ---

@@ -39,6 +39,7 @@ $dt-yellow: #f1fa8c;
   color: $dt-gray-light;
   margin: ($gutter/2) (-$gutter);
   padding: $gutter;
+  overflow: scroll;
 
   .hll,
   .s,

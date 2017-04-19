@@ -43,9 +43,13 @@ header {
 
 aside.sidebar {
   padding: 50px;
+  .fixed {
+    position: fixed;
+    top: $gutter;
+  }
 }
 
-.documentation {
+article.documentation {
   padding: $gutter;
   background-color: #fff;
 }
