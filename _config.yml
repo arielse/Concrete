@@ -27,6 +27,3 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-collections:
-  docs:
-    title: Documentation

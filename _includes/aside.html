@@ -1,28 +1,32 @@
 <aside class="sidebar column l4 m-hide s-hide">
   <div>
     <h3>Contents</h3>
-    <ul role="navigation">
-      <li>
-        <h4><a href="#getting-started">Getting Started</a></h4>
-        <ul>
+    <ul class="nav-main" role="navigation">
+
+
+      <li class="dropdown" aria-haspopup="true">
+        <h4><a data-scroll href="#getting-started" data-handle="getting-started">Getting Started</a></h4>
+        <ul class="dropdown-menu" data-handle="getting-started">
           {% for item in site.docs %}
             {% if item.category == 'Getting Started' %}
-              <li><a href="#{{ item.handle }}">{{ item.title }}</a></li>
+              <li><a data-scroll class="nav-link" href="#{{ item.handle }}">{{ item.title }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
       </li>
 
-      <li>
-        <h4><a href="#the-grid">The Grid</a></h4>
-        <ul>
+      <li class="dropdown" aria-haspopup="true">
+        <h4><a data-scroll href="#the-grid" data-handle="the-grid">The Grid</a></h4>
+        <ul class="dropdown-menu" data-handle="the-grid">
           {% for item in site.docs %}
             {% if item.category == 'The Grid' %}
-              <li><a href="#{{ item.handle }}">{{ item.title }}</a></li>
+              <li><a data-scroll class="nav-link" href="#{{ item.handle }}">{{ item.title }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
       </li>
+
+
     </ul>
   </div>
 </aside>

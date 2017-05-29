@@ -1,0 +1,17 @@
+.nav-main {
+  overflow: scroll;
+  .dropdown {
+    &:hover {
+      .dropdown-menu {
+        height: 100%;
+      }
+    }
+    .dropdown-menu {
+      height: 0;
+      overflow: hidden;
+      &.active {
+        height: 100%;
+      }
+    }
+  }
+}

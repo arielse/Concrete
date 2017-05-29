@@ -1,0 +1,12 @@
+{% case icon %}
+  {% when 'code' %}
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon {{ icon }}" viewBox="0 0 48 48">
+      <g class="stroke">
+        <polyline points="12,16 4,24 12,32"/>
+        <polyline points="36,16 44,24 36,32"/>
+        <line x1="20" y1="40" x2="28" y2="8"/>
+      </g>
+    </svg>
+  {% else %}
+    {{ icon }}
+{% endcase %}

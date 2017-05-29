@@ -1,19 +1,18 @@
-<article class="column l8 m12 s12 documentation">
-
-    <h2 class="anchor" id="getting-started">Getting Started</h2>
-    {% for item in site.docs %}
-      {% if item.category == 'Getting Started' %}
-        <h3 class="anchor" id="{{ item.handle }}">{{ item.title }}</h3>
-        {{ item.content }}
-      {% endif %}
-    {% endfor %}
-
-    <h2 class="anchor" id="the-grid">The Grid</h2>
-    {% for item in site.docs %}
-      {% if item.category == 'The Grid' %}
-        <h3 class="anchor" id="{{ item.handle }}">{{ item.title }}</h3>
-        {{ item.content }}
-      {% endif %}
-    {% endfor %}
-
-</article>
+<div class="column l8 m12 s12 documentation">
+  {% for link in site.data.navigation.main %}
+    <article class="anchor" id="getting-started">
+      <h2>{{ link.title }}</h2>
+      {% for childlink in link.children %}
+        {% assign handle = childlink.handle %}
+        <div class="anchor content" id="{{ childlink.handle }}">
+          <h3>{{ childlink.title }}</h3>
+          {% for doc in site.docs %}
+            {% if doc.handle == handle %}
+              {{ doc.content }}
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </article>
+  {% endfor %}
+</div>
